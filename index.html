@@ -79,7 +79,7 @@
       <div class="row">
         <div class="col-md-8 mx-auto">
           <h2 class="section-heading">Get started on Oculus</h2>
-          <p>SuturingVR is available to download for free from the Oculus Store</p>
+          <p>SuturingVR is available to download for free from the Oculus Store. Click the Oculus icon to view it!</p>
           <div class="badges">
             <a class="badge-link" id="badge-link" href="https://www.oculus.com/experiences/quest/3349113658522737/"
               target="_blank">
@@ -99,7 +99,7 @@
         <h2 style="color: white;"> Check Out the Demo! </h2>
         <br>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FUYLpK67DMo"
+          <iframe class="embed-responsive-item" src="https://youtu.be/8va_5Up0VdM"
             allowfullscreen></iframe>
         </div>
       </div>
@@ -147,7 +147,6 @@
     animate();
 
     function init() {
-
       container = document.createElement('div');
       container.id = "stage3d";
       document.body.appendChild(container);
@@ -218,11 +217,9 @@
       //
 
       window.addEventListener('resize', onWindowResize, false);
-
     }
 
     function onWindowResize() {
-
       windowHalfX = window.innerWidth / 4;
       windowHalfY = window.innerHeight / 4;
 
@@ -230,39 +227,26 @@
       camera.updateProjectionMatrix();
 
       renderer.setSize(window.innerWidth, window.innerHeight);
-
     }
 
     function onDocumentMouseMove(event) {
-
       mouseX = (event.clientX - windowHalfX) * 2;
       mouseY = (event.clientY - windowHalfY) * 2;
-
     }
 
     //
 
     function animate() {
-
       requestAnimationFrame(animate);
       render();
-
     }
 
     function render() {
       camera.position.x += (mouseX - camera.position.x) * .0080;
       camera.position.y += (- mouseY - camera.position.y) * .0080;
-
       camera.lookAt(scene.position);
 
-      /*var currentSeconds = Date.now();
-      group.rotation.x = Math.sin( currentSeconds * 0.0007 ) * 0.5;
-      group.rotation.y = Math.sin( currentSeconds * 0.0003 ) * 0.5;
-      group.rotation.z = Math.sin( currentSeconds * 0.0002 ) * 0.5;
-      */
-
       renderer.render(scene, camera);
-
     } 
   </script>
 
@@ -271,7 +255,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; SuturingVR 2021. All Rights Reserved.</p>
+      <p>&copy; Dream Team Engineering 2022. All Rights Reserved.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
           <a href="privacy.html">Privacy</a>
